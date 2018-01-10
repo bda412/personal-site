@@ -1,0 +1,135 @@
+/*-----NEITHAN FONT-----*/
+@font-face {
+  font-family: 'Neithan';
+  src: url('Neithan.eot'); /* IE9 Compat Modes */
+  src:   url('Neithan.woff2') format('woff2'), /* Super Modern Browsers */ url('Neithan.woff') format('woff'), /* Pretty Modern Browsers */
+    url('Neithan.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+/*-----GLOBAL-----*/
+* {
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width:75%;
+    margin: auto;
+}
+
+/*-----HERO SECTION-----*/
+#hero {
+    background-image: url(../img/hero-image-pic.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    padding: 3rem 0;
+    height: 5rem;
+}
+
+.letter-logo {
+    display: none;
+}
+
+.logo p {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+    display: none;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    padding: 3rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 1.8rem;
+    padding: 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    transition: all 0.5s ease;
+}
+
+nav ul li a:hover {
+    color: #a02144;
+}
+
+.contact-button a {
+    color: #a02144;
+    background: #fff;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
+}
+
+.contact-button a:hover {
+    color: #fff;
+    background: #a02144;
+}
+
+.banner {
+    padding: 12rem 0;
+}
+
+.first-text-line,
+.comma {
+    font-family: Neithan, EB Garamond, serif;
+    font-size:8rem;
+}
+
+.second-text-line {
+    font-family: Neithan, EB Garamond, serif;
+    font-size: 10rem;
+}
+
+.title {
+    padding: 1rem 0;
+    font-size: 3.5rem;
+    line-height: 5rem;
+    color: #a02144;
+}
+
+
+/*-----ABOUT SECTION-----*/
+
+
+
+/*-----WORK SECTION-----*/
+
+
+
+/*-----CONTACT SECTION-----*/
+
+
+
+/*-----FOOTER-----*/

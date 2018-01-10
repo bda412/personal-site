@@ -4,40 +4,44 @@
     <meta charset="UTF-8">
     <title>Briana Antuna | Web Designer and Developer</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat:400,700|Quicksand" rel="stylesheet">
 </head>
 <body>
-   <div class="hero">
-       <div class="containter">
-           <div class="logo">
-               <img src="" alt="">
+   <div id="hero">
+       <div class="container">
+           <div class="header">
+              <div class="logo">
+               <img src="img/circle-logo.png" alt="circular logo" class="circle-logo">
+               <img src="img/letter-logo-white.png" alt="letter logo" class="letter-logo">
                <p>Brianna Antuna</p>
-           </div>
-           <div class="nav">
+               </div>
+           <nav>
                <ul>
                    <li><a href="#about">About</a></li>
                    <li><a href="#work">Work</a></li>
-                   <li><a href="#contact">Get in Touch</a></li>
+                   <li class="contact-button"><a href="#contact">Get in Touch</a></li>
                </ul>
+           </nav>
            </div>
            <div class="banner">
-               <p class="first-text-line">Hey There,</p>
+               <p class="first-text-line">Hey there<span class="comma">,</span></p>
                <p class="second-text-line">I'm Brianna</p>
                <p class="title">Web Designer + <br>Front End Developer</p>
            </div>
        </div>
    </div>
-    <div class="about">
+    <div id="about">
+       <div class="container">
         <div class="profile-image">
-            <img src="" alt="">
+            <img src="img/my-photo.jpg" alt="my photo">
         </div>
         <div class="about-text">
             <h3 class="about-heading">About Me</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed fuga, voluptatibus placeat. Debitis, facilis assumenda obcaecati? Iure pariatur aperiam aliquid dignissimos? Amet velit, deserunt dolor sapiente totam quo eaque quae.</p>
             <div class="icons">
-                <img src="" alt="Email">
-                <img src="" alt="Github">
-                <img src="" alt="LinkedIn">
+                <img src="img/envelope.png" alt="Email">
+                <img src="img/github.png" alt="Github">
+                <img src="img/linkedin.png" alt="LinkedIn">
             </div>
             <h4 class="skills-heading">Skills</h4>
             <ul class="skill-list">
@@ -49,8 +53,10 @@
                 <li>skill</li>
             </ul>
         </div>
+        </div>
     </div>
-    <div class="work">
+    <div id="work">
+       <div class="container">
         <h3 class="work-heading">Featured Work</h3>
         <div class="work-card">
         <img src="" alt="">
@@ -76,16 +82,18 @@
         <img src="" alt="">
         <p class="work-title">Website</p>
         </div>
+        </div>
     </div>
-    <div class="contact">
+    <div id="contact">
+       <div class="container">
         <div class="contact-text">
         <h3 class="contact-heading">Contact</h3>
         <p>Ready to work together? I'd lover to get in touch!</p>
         <p>Contact me here via this form or email me anytime at bdatuna@gmail.com</p>
         <div class="icons">
-                <img src="" alt="Email">
-                <img src="" alt="Github">
-                <img src="" alt="LinkedIn">
+                <img src="img/envelope.png" alt="Email">
+                <img src="img/github.png" alt="Github">
+                <img src="img/linkedin.png" alt="LinkedIn">
             </div>
         </div>
         <div class="contact-form">
@@ -96,10 +104,13 @@
   <button type="submit">Send</button>
 </form>
         </div>
+        </div>
     </div>
     <footer>
+       <div class="container">
         <p>Made with love by me, of course</p>
         <p>bdantuna@gmail.com</p>
+        </div>
     </footer>
 </body>
 </html>
