@@ -2,29 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Briana Antuna | Web Designer and Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brianna Antuna | Web Designer and Developer</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat:400,700|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat:400,500,700|Quicksand" rel="stylesheet">
+    <script src="https://use.fontawesome.com/1b909c3dd6.js"></script>
 </head>
 <body>
    <div id="hero">
-       <div class="container">
-           <div class="header">
+       
+           
+              <nav id="navbar">
+              <div class="nav-container">
               <div class="logo">
-               <img src="img/circle-logo.png" alt="circular logo" class="circle-logo">
-               <img src="img/letter-logo-white.png" alt="letter logo" class="letter-logo">
-               <p>Brianna Antuna</p>
-               </div>
-           <nav>
-               <ul>
-                   <li><a href="#about">About</a></li>
-                   <li><a href="#work">Work</a></li>
-                   <li class="contact-button"><a href="#contact">Get in Touch</a></li>
-               </ul>
+                  <a href="#hero"><img src="img/circle-logo.png" alt="circular logo" class="circle-logo"></a>
+               <a href="#hero" class="logo-text smoothScroll"><p>Brianna Antuna</p></a>
+                  </div>    
+                  <div class="menu">
+                   <a href="#about">About</a>
+                   <a href="#work">Work</a>
+                   <a class="contact-button" href="#contact">Get in Touch</a>
+                   </div>
+                   </div>
            </nav>
-           </div>
+           <div class="container">
            <div class="banner">
-               <p class="first-text-line">Hey there<span class="comma">,</span></p>
+               <p class="first-text-line">hey there<span class="comma">,</span></p>
                <p class="second-text-line">I'm Brianna</p>
                <p class="title">Web Designer + <br>Front End Developer</p>
            </div>
@@ -32,7 +36,7 @@
    </div>
     <div id="about">
        <div class="container">
-       <h3 class="about-heading">About Me</h3>
+       <h3 class="about-heading">a little about me</h3>
        <div class="about-content">
         <div class="profile-image">
             <img src="img/my-photo.jpg" alt="my photo">
@@ -40,26 +44,23 @@
         <div class="about-text">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed fuga, voluptatibus placeat. Debitis, facilis assumenda obcaecati? Iure pariatur aperiam aliquid dignissimos? Amet velit, deserunt dolor sapiente totam quo eaque quae.</p>
             <div class="about-icons">
-                <img src="img/envelope.png" alt="Email">
-                <img src="img/github.png" alt="Github">
-                <img src="img/linkedin.png" alt="LinkedIn">
+               <i class="fa fa-envelope" aria-hidden="true"><a href="#"></a></i>
+               <i class="fa fa-github" aria-hidden="true"><a href=""></a></i>
+                <i class="fa fa-linkedin-square" aria-hidden="true"><a href=""></a></i>
             </div>
-            <h4 class="skills-heading">Skills</h4>
+            <h4 class="skills-heading">Tech Skills</h4>
             <div class="skills">
             <ul class="skill-list-1">
-                <li>skill</li>
-                <li>skill</li>
-                <li>skill</li>
+                <li>HTML/CSS/SCSS</li>
+                <li>Wordpress</li>
             </ul>
             <ul class="skill-list-2">
-                <li>skill</li>
-                <li>skill</li>
-                <li>skill</li>
+                <li>Javascript/JQuery</li>
+                <li>Adobe Photoshop</li>
             </ul>
             <ul class="skill-list-3">
-                <li>skill</li>
-                <li>skill</li>
-                <li>skill</li>
+                <li>Version Control (Git)</li>
+                <li>Responsive Design</li>
             </ul>
             </div>
         </div>
@@ -68,30 +69,30 @@
     </div>
     <div id="work">
        <div class="container">
-        <h3 class="work-heading">Featured Work</h3>
+        <h3 class="work-heading">featured work</h3>
         <div class="work-grid">
         <div class="work-card">
-        <img src="" alt="">
+        <img src="img/my-photo.jpg" alt="">
         <p class="work-title">Website</p>
         </div>
         <div class="work-card">
-        <img src="" alt="">
+        <img src="img/my-photo.jpg" alt="">
         <p class="work-title">Website</p>
         </div>
         <div class="work-card">
-        <img src="" alt="">
+        <img src="img/my-photo.jpg" alt="">
         <p class="work-title">Website</p>
         </div>
         <div class="work-card">
-        <img src="" alt="">
+        <img src="img/my-photo.jpg" alt="">
         <p class="work-title">Website</p>
         </div>
         <div class="work-card">
-        <img src="" alt="">
+        <img src="img/my-photo.jpg" alt="">
         <p class="work-title">Website</p>
         </div>
         <div class="work-card">
-        <img src="" alt="">
+        <img src="img/my-photo.jpg" alt="">
         <p class="work-title">Website</p>
         </div>
         </div>
@@ -99,14 +100,15 @@
     </div>
     <div id="contact">
        <div class="container">
+       <div class="contact-content">
         <div class="contact-text">
-        <h3 class="contact-heading">Contact</h3>
+        <h3 class="contact-heading">contact</h3>
         <p>Ready to work together? I'd lover to get in touch!</p>
-        <p>Contact me here via this form or email me anytime at bdatuna@gmail.com</p>
-        <div class="icons">
-                <img src="img/envelope.png" alt="Email">
-                <img src="img/github.png" alt="Github">
-                <img src="img/linkedin.png" alt="LinkedIn">
+        <p>Contact me here via this form or email me anytime at <span>bdantuna@gmail.com</span></p>
+        <div class="contact-icons">
+                <i class="fa fa-envelope" aria-hidden="true"><a href="#"></a></i>
+               <i class="fa fa-github" aria-hidden="true"><a href=""></a></i>
+                <i class="fa fa-linkedin-square" aria-hidden="true"><a href=""></a></i>
             </div>
         </div>
         <div class="contact-form">
@@ -118,12 +120,21 @@
 </form>
         </div>
         </div>
+        </div>
     </div>
     <footer>
        <div class="container">
-        <p>Made with love by me, of course</p>
+       <div class="footer-content">
+        <p>&copy; 2018 - Brianna Antuna</p>
         <p>bdantuna@gmail.com</p>
         </div>
+        </div>
     </footer>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="js/script.js"></script> 
 </body>
+
 </html>

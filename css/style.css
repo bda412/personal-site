@@ -8,13 +8,22 @@
 
 /*-----GLOBAL-----*/
 * {
-    font-family: Montserrat, sans-serif;
-    font-size: 10px;
     padding: 0;
     margin: 0;
 }
 
+html {
+  font-size: 62.5%;
+  /*10px*/ }
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
 .container {
+    max-width: 1000px;
     width:75%;
     margin: auto;
 }
@@ -23,93 +32,112 @@
 #hero {
     background-image: url(../img/hero-image-pic.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: bottom;
     height: 100vh;
 }
 
-.header {
-    display: flex;
+nav {
+    width: 100%;
+    margin: auto;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(161, 161, 161, 0.8);
+}
+
+.nav-container {
+    width: 75%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.menu {
+    display: flex;
     align-items: center;
 }
 
-.logo img {
-    padding: 3rem 0;
-    height: 5rem;
+.circle-logo {
+    height: 4rem;
 }
 
-.letter-logo {
-    display: none;
+.logo-text {
+    color: #000;
+    text-decoration: none;
 }
 
-.logo p {
+nav p {
     text-transform: uppercase;
     font-size: 1.8rem;
-    letter-spacing: 0.4rem;
-    display: none;
+    letter-spacing: 0.3rem;
+    padding: 0 1.5rem;
 }
 
-nav{
-    display: flex;
-    justify-content: flex-end;
-    padding: 3rem;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-between;
-}
-
-nav ul li {
-    list-style: none;
-}
-
-nav ul li a {
+.menu a {
     font-size: 1.8rem;
-    padding: 3rem;
     text-decoration: none;
     text-transform: uppercase;
-    color: #000;
-    transition: all 0.5s ease;
+    color: #fff;
+    transition: all 0.3s ease;
+    padding: 0 3rem;
+    
 }
 
-nav ul li a:hover {
+.menu a:hover {
     color: #a02144;
 }
 
-.contact-button a {
+.menu .contact-button {
     color: #a02144;
+    text-align: center;
     background: #fff;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 1rem;
     transition: all 0.5s ease;
 }
 
-.contact-button a:hover {
+.menu .contact-button:hover {
     color: #fff;
     background: #a02144;
 }
 
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+    
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+    
+}
+
 .banner {
-    padding: 12rem 0;
+    position: absolute;
+    top: 30%;
+    animation: moveInLeft 0.7s ease-in;
 }
 
 .first-text-line,
 .comma {
     font-family: Neithan, EB Garamond, serif;
-    font-size:8rem;
+    font-size: 8rem;
+    line-height: 1;
 }
 
 .second-text-line {
     font-family: Neithan, EB Garamond, serif;
     font-size: 10rem;
+    line-height: 1;
 }
 
 .title {
@@ -119,23 +147,405 @@ nav ul li a:hover {
     color: #a02144;
 }
 
+@media all and (max-width: 768px) { 
+    
+    .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo {
+        margin: 0.5rem 0 0;
+    }
+    
+    .logo p {
+        font-size: 1.3rem;
+    }
+    
+    .circle-logo {
+        height: 3rem;
+    }
+    
+    .menu a {
+        font-size: 1.1rem;
+        padding: 1rem;
+        font-weight: 700;
+        margin: 0 1rem 1rem;
+    }
+    
+    .first-text-line,
+.comma {
+    font-size: 6rem;
+}
+
+.second-text-line {
+    font-size: 8rem;
+}
+    
+    .title {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        font-weight: 500;
+    }
+   
+}
+
+@media all and (max-width: 480px) { 
+    
+    .first-text-line,
+.comma {
+    font-weight: 800px;
+    font-size: 5rem;
+}
+
+.second-text-line {
+    font-size: 6rem;
+}
+    
+    .title {
+    
+        font-size: 2.3rem;
+        line-height: 3rem;
+    }
+}
 
 /*-----ABOUT SECTION-----*/
 
 #about {
-    display: flex;
+    padding: 8rem 0;
 }
 
 .about-heading {
     text-align: right;
+    transform:translate(-9%, 75%);
+    font-family: Neithan, EB Garamond, serif;
+    font-size: 6rem;
+    font-weight: 400;
 }
 
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    animation: moveInRight 0.7s ease-in;
+}
+
+.profile-image {
+    width: 50%;
+}
+
+.profile-image img {
+    width: 80%;
+    border-radius: 100%;
+    height: auto;
+    padding: 1.5rem 0;
+}
+
+.about-text {
+    width: 50%;
+    padding: 10rem 0 6rem;
+    text-align: justify;
+}
+
+.about-icons {
+    text-align: center;
+    padding: 3rem;
+    color: #a02144;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+}
+
+.about-icons i {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.about-icons i:hover {
+    color: #6e7c4f;
+}
+
+.skills-heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.skills {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2rem 0;
+    justify-content: space-around;
+}
+
+.skills ul li {
+    line-height: 3rem;
+}
+
+@media all and (max-width: 768px) { 
+    #about {
+        padding: 12rem 0;
+    }
+    
+    .about-content {
+    justify-content: center;
+    }
+    
+.about-heading {
+    text-align: center;
+    transform: none;
+}
+    
+    .profile-image {
+    width: 100%;
+        max-width: 250px;
+    text-align: center;
+    }
+    
+    .profile-image img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .about-text {
+    width: 100%;
+    padding: 2rem 0;
+    }
+    
+    .skills ul {
+        font-size: 1.4rem;
+    }
+}
+@media all and (max-width: 480px) { 
+    .about-heading {
+        font-size: 5rem;
+    }
+}
+
+
 /*-----WORK SECTION-----*/
+#work {
+    background-color: #e2dad8;
+    padding: 3rem 0 10rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.work-heading {
+    text-align: center;
+    font-family: Neithan, EB Garamond, serif;
+    font-size: 6rem;
+    font-weight: 400;
+    padding: 4rem;
+}
+
+.work-grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.work-card {
+     margin: 2.5rem 0;
+    width: 30rem;
+}
+
+.work-card img {
+    width: 100%;
+}
 
 
+.work-title {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media all and (max-width: 768px) { 
+    #work {
+        padding: 7rem 0;
+    }
+    
+    .work-card {
+        margin: 2.5rem auto;
+    }
+    
+    .work-heading {
+        font-size: 5rem;
+    }
+    
+}
+@media all and (max-width: 480px) { 
+    
+}
 
 /*-----CONTACT SECTION-----*/
+#contact {
+    padding: 10rem 0;
+    background: #a02144;
+}
 
+.contact-content {
+    display: flex; 
+}
+
+.contact-text {
+    width: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-heading {
+    font-family: Neithan, EB Garamond, serif;
+    font-weight: 400;
+    font-size: 6rem;
+    color: #fff;
+}
+
+.contact-text p {
+    margin: 2rem 0;
+}
+
+.contact-text p span {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.contact-icons {
+    text-align: center;
+    padding: 3rem;
+    color: #e2dad8;
+    font-size: 4rem;
+    letter-spacing: 2rem;
+}
+
+.contact-icons i {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-icons i:hover {
+    color: #6e7c4f;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-flow: column;
+}
+
+.contact-form form input, 
+.contact-form form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    align-self: center;
+    line-height: 2rem;
+    border: none;
+    border-bottom: solid 1px #000;
+    padding: 1rem;
+    font-family: Montserrat, sans-serif;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.contact-form form textarea {
+    height: 16rem;
+}
+
+
+.contact-form button {
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 0.1rem;
+    width: 25%;
+    align-self: center;
+    background: #e2dad8;
+    color: #a02144;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 2rem 2rem 0;
+}
+
+.contact-form button:hover {
+    color: #fff;
+    background: #6e7c4f;
+}
+
+@media all and (max-width: 768px) {
+    #contact {
+        padding: 12rem 0;
+    }
+    
+    .contact-content {
+        
+    flex-direction: column; 
+        align-items: center;
+}
+    .contact-form,
+    .contact-text {
+        width: 100%;
+    }
+    
+}
 
 
 /*-----FOOTER-----*/
+footer {
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+@media all and (max-width: 480px) { 
+    .footer-content {
+         flex-direction: column;
+         text-align: center;
+    }
+}
+
+
+/*-----KEYFRAMES-----*/
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  80% {
+    transform: translateY(-0.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
